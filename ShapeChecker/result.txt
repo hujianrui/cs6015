@@ -1,0 +1,22 @@
+rectangle
+kite
+square
+rhombus
+trapezoid
+error 4
+parallelogram
+square
+rhombus
+parallelogram
+trapezoid
+Quadrilateral
+error 1
+error 1
+error 1
+error 1
+square
+error 2
+error 2
+error 3
+Quadrilateral
+error 3
