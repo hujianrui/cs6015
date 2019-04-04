@@ -89,6 +89,7 @@ void supermarket::printResult(){
     cout<<"Supermarket 10% tail is :" << customersTotalWaitingTime[tenTile]/60.0 << "\n";
     cout<<"Supermarket 50% tail is :" << customersTotalWaitingTime[fiftyTile]/60.0 << "\n";
     cout<<"Supermarket 90% tail is :" << customersTotalWaitingTime[ninetyTile]/60.0 << "\n";
+//    cout <<customersTotalWaitingTime[ninetyTile]/60.0 <<"\n";
 }
 
 void supermarket::run(){

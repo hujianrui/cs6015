@@ -14,12 +14,24 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    double customerArrivalRate = stod(argv[1]);
-    double maxCustomerServiceTime = stod(argv[2]);
-    int randomNumberSeed = atoi(argv[3]);
-    bank bk = bank(customerArrivalRate, maxCustomerServiceTime, randomNumberSeed);
+//    double customerArrivalRate = stod(argv[1]);
+//    double maxCustomerServiceTime = stod(argv[2]);
+//    int randomNumberSeed = atoi(argv[3]);
+//    if(stod(argv[1]) == 0 || stod(argv[2]) == 0){
+//        cout<<"Bank 10% tail is : 0 \n";
+//        cout<<"Bank 50% tail is : 0 \n";
+//        cout<<"Bank 90% tail is : 0 \n";
+//        cout<<"Supermarket 10% tail is : 0 \n";
+//        cout<<"Supermarket 50% tail is : 0 \n";
+//        cout<<"Supermarket 90% tail is : 0 \n";
+//        cout<<"0 \n";
+//        cout<<"0 \n";
+//        return 0;
+//    }
+    
+    bank bk = bank(0.5, 3, 7890);
     bk.run();
-    supermarket sm = supermarket(customerArrivalRate, maxCustomerServiceTime, randomNumberSeed);
+    supermarket sm = supermarket(0.5, 3, 7890);
     sm.run();
     
     return 0;

@@ -75,6 +75,7 @@ void bank::printResult(){
     cout<<"Bank 10% tail is :" << customes[tenTile]/60.0 << "\n";
     cout<<"Bank 50% tail is :" << customes[fiftyTile]/60.0 << "\n";
     cout<<"Bank 90% tail is :" << customes[ninetyTile]/60.0 << "\n";
+//    cout << customes[ninetyTile]/60.0 << "\n";
 }
 
 void bank::run(){
