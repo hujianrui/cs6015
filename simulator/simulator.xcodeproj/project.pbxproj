@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		85AC53512251B204000D1AD0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85AC53502251B204000D1AD0 /* main.cpp */; };
+		85B2DAF62254734F005EFF8E /* supermarket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B2DAF42254734F005EFF8E /* supermarket.cpp */; };
+		85C07B122253C68B00F9FC88 /* bank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85C07B102253C68B00F9FC88 /* bank.cpp */; };
+		85C07B152253C7F000F9FC88 /* customer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85C07B132253C7F000F9FC88 /* customer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		85AC534D2251B204000D1AD0 /* simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = simulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AC53502251B204000D1AD0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		85B2DAF42254734F005EFF8E /* supermarket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = supermarket.cpp; sourceTree = "<group>"; };
+		85B2DAF52254734F005EFF8E /* supermarket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = supermarket.hpp; sourceTree = "<group>"; };
+		85C07B102253C68B00F9FC88 /* bank.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bank.cpp; sourceTree = "<group>"; };
+		85C07B112253C68B00F9FC88 /* bank.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bank.hpp; sourceTree = "<group>"; };
+		85C07B132253C7F000F9FC88 /* customer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = customer.cpp; sourceTree = "<group>"; };
+		85C07B142253C7F000F9FC88 /* customer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = customer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				85AC53502251B204000D1AD0 /* main.cpp */,
+				85C07B102253C68B00F9FC88 /* bank.cpp */,
+				85C07B112253C68B00F9FC88 /* bank.hpp */,
+				85C07B132253C7F000F9FC88 /* customer.cpp */,
+				85C07B142253C7F000F9FC88 /* customer.hpp */,
+				85B2DAF42254734F005EFF8E /* supermarket.cpp */,
+				85B2DAF52254734F005EFF8E /* supermarket.hpp */,
 			);
 			path = simulator;
 			sourceTree = "<group>";
@@ -118,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B2DAF62254734F005EFF8E /* supermarket.cpp in Sources */,
 				85AC53512251B204000D1AD0 /* main.cpp in Sources */,
+				85C07B152253C7F000F9FC88 /* customer.cpp in Sources */,
+				85C07B122253C68B00F9FC88 /* bank.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
