@@ -28,9 +28,12 @@ private:
     int nextCustomerArrive;
     int currentTime;
     int skipTime;
+    //added variable, incase tellers change in future
+    int numTeller;
 public:
-    bank(double customerArrivalRate, double maxCustomerServiceTime, int randomNumberSeed);
+    bank(double customerArrivalRate, double maxCustomerServiceTime, int randomNumberSeed, int numTeller);
     void run();
+    int getNumTeller();
 private:
     void addNewCustomer();
     void cashierCheck();
