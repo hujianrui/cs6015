@@ -29,9 +29,12 @@ private:
     int nextCustomerArrive;
     int currentTime;
     int skipTime;
+    //added variable, incase cashiers change in future
+    int numCashiers;
 public:
-    supermarket(double customerArrivalRate, double maxCustomerServiceTime, int randomNumberSeed);
+    supermarket(double customerArrivalRate, double maxCustomerServiceTime, int randomNumberSeed, int numCashiers);
     void run();
+    int getNumCashiers();
 private:
     void addNewCustomer();
     void cashierCheck();

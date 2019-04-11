@@ -10,19 +10,30 @@
 
 using namespace std;
 
-bank::bank(double customerArrivalRate, double maxCustomerServiceTime, int randomNumberSeed){
-    for(int i = 0; i < 6 ; i++){
-        this -> cashierQ.push(0);
-    }
+/*
+    Descr: Bank class contructor, Initializes variables, loads cashier queue, generates random number
+    Params: double, double, int, int
+    Returned value: none
+ */
+bank::bank(double customerArrivalRate, double maxCustomerServiceTime, int randomNumberSeed, int numTeller){
     this->customerArrivalRate = customerArrivalRate;
     this->maxCustomerServiceTime = maxCustomerServiceTime;
     this->randomNumberSeed = randomNumberSeed;
+    this->numTeller = numTeller;
     numCustomer = 0;
+    for(int i = 0; i < getNumTeller() ; i++){
+        this -> cashierQ.push(0);
+    }
     nextCustomerArrive = (numCustomer * 60/customerArrivalRate) + (rand()%(int)(60/customerArrivalRate));
     currentTime = 0;
     numCustomer++;
 }
 
+/*
+    Descr: Adds new customer, generates random service time, generates next customer arrival
+    Params: none
+    Returned value: none
+ */
 void bank::addNewCustomer(){
     int customerServiceTime = (rand() % (int)(maxCustomerServiceTime * 60)) + 1;
     if(nextCustomerArrive == currentTime){
@@ -33,6 +44,11 @@ void bank::addNewCustomer(){
     }
 }
 
+/*
+ Descr: Checks customer queue, updates customer class and customer queue
+ Params: none
+ Returned value: none
+ */
 void bank::cashierCheck(){
     while(cashierQ.top() == 0 && !customerQ.empty()){
         customer currentCustomer = customerQ.front();
@@ -46,6 +62,11 @@ void bank::cashierCheck(){
     }
 }
 
+/*
+ Descr: Adds new customer, generates random service time, generates next customer arrival
+ Params: none
+ Returned value: none
+ */
 void bank::nextEvent(){
     int cashierRemain = cashierQ.top();
     int nextCustomerCount = nextCustomerArrive - currentTime;
@@ -55,9 +76,14 @@ void bank::nextEvent(){
     }
 }
 
+/*
+ Descr: Updates time for cashier queue
+ Params: none
+ Returned value: none
+ */
 void bank::updateTime(){
     priority_queue< int, vector<int>, greater<int> > cashierNewQ;
-    for(int i = 0; i < 6 ; i++){
+    for(int i = 0; i < getNumTeller() ; i++){
         int current = cashierQ.top();
         cashierQ.pop();
         int update = current - skipTime;
@@ -67,6 +93,11 @@ void bank::updateTime(){
     currentTime += skipTime;
 }
 
+/*
+ Descr: Prints the results for the different customer times
+ Params: none
+ Returned value: none
+ */
 void bank::printResult(){
     sort(customes.begin(),customes.end());
     int tenTile = customes.size() * 0.1;
@@ -78,6 +109,11 @@ void bank::printResult(){
 //    cout << customes[ninetyTile]/60.0 << "\n";
 }
 
+/*
+ Descr: Runs the program for the Bank simulator
+ Params: none
+ Returned value: none
+ */
 void bank::run(){
     int totalTime = 12 * 60 * 60;
     while(currentTime < totalTime){
@@ -87,4 +123,9 @@ void bank::run(){
         updateTime();
     }
     printResult();
+}
+
+//added getter for number of tellers, scalability
+int bank::getNumTeller() {
+    return numTeller;
 }

@@ -29,9 +29,20 @@ int main(int argc, const char * argv[]) {
 //        return 0;
 //    }
     
-    bank bk = bank(0.5, 3, 7890);
+    bank bk = bank(0.5, 3, 7890, 6);
     bk.run();
-    supermarket sm = supermarket(0.5, 3, 7890);
+    supermarket sm = supermarket(0.5, 3, 7890, 6);
+    sm.run();
+    
+    //New Tests
+    bank bk2 = bank(0.32, 5.1, 34534, 6);
+    bk.run();
+    supermarket sm2 = supermarket(0.32, 5.1, 34534, 6);
+    sm.run();
+    
+    bank bk3 = bank(1.0, 7, 34534, 6);
+    bk.run();
+    supermarket sm3 = supermarket(1.0, 7, 34534, 6);
     sm.run();
     
     return 0;
